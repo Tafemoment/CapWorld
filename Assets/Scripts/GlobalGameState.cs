@@ -1,27 +1,22 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
-public class GlobalGameState
+public static class GlobalGameState
 {
 
     //current state of the game
-    public GameStates currentGameState = GameStates.UIViewLock;
-    public static void ChangeGameState()
+    public static GameStates currentGameState = GameStates.UIViewLock;
+    public static void ChangeGameState(GameStates state)
     {
-        switch (currentGameState)
+        switch (state)
         {
             case GameStates.UIViewLock:
-                break;
-                case GameStates.UIViewLock;
                 Cursor.lockState = CursorLockMode.Confined;
                 Cursor.visible = true;
                 break;
-                case GameStates.InPlay;
+            case GameStates.InPlay:
                 Cursor.lockState = CursorLockMode.Locked;
                 Cursor.visible = false;
                 break;
-            case GameStates.RemovedFromPlay;
+            case GameStates.RemovedFromPlay:
                 Cursor.lockState = CursorLockMode.Locked;
                 Cursor.visible = false;
                 break;
