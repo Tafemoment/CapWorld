@@ -83,18 +83,18 @@ public class MainMenu : MonoBehaviour
         gameVolume = GUI.HorizontalSlider(new Rect(UIHandler.ScreenPlacement(1.25f, 1.8f, 2.5f, 0.25f)), gameVolume,-20, 20);
         
         //music volume
-        GUI.Box(new Rect(UIHandler.ScreenPlacement(1.25f, 1.4f, 2.5f, 0.4f)), "Music Volume");
+        GUI.Box(new Rect(UIHandler.ScreenPlacement(1.25f, 1.4f, 1f, 0.4f)), "Music Volume");
         //SFX volume
         GUI.Box(new Rect(UIHandler.ScreenPlacement(1.25f, 1.4f, 2.5f, 0.4f)), "SFX Volume");
         #endregion
         #region Brightness
-        GUI.Box(new Rect(UIHandler.ScreenPlacement(1, 3.3f, 3, 2.3f)), "Render");
+        GUI.Box(new Rect(UIHandler.ScreenPlacement(1, 6.3f, 3, 2.3f)), "Render");
         GUI.Box(new Rect(UIHandler.ScreenPlacement(1, 3.3f, 3, 1.75f)), cameraRender);
         //Brightness - 3D lighting
-        GUI.Box(new Rect(UIHandler.ScreenPlacement(1, 3.3f, 3, 2.3f)), "Brightness");
-        GUI.Box(new Rect(UIHandler.ScreenPlacement(1.25f, 4.2f, 2.5f, 0.4f)), "Light Intensity");
-        lightIntensity = GUI.HorizontalSlider(new Rect(UIHandler.ScreenPlacement(1.25f, 4.6f, 2.5f, 0.25f)), lightIntensity, 0, 1);
-        if (lightIntensity != lightIntensity.intensity)
+        GUI.Box(new Rect(UIHandler.ScreenPlacement(1, 4f, 3, 2.3f)), "Brightness");
+        GUI.Box(new Rect(UIHandler.ScreenPlacement(1.25f, 4.4f, 2.5f, 0.4f)), "Light Intensity");
+        lightIntensity = GUI.HorizontalSlider(new Rect(UIHandler.ScreenPlacement(1.25f, 4.8f, 2.5f, 0.25f)), lightIntensity, 0, 1);
+        //if (lightIntensity != lightIntensity.intensity)
         {
             theSun.intensity = lightIntensity;
         }
